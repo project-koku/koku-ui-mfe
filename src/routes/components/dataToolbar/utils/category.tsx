@@ -1,4 +1,4 @@
-import type { ToolbarChipGroup } from '@patternfly/react-core';
+import type { ToolbarLabelGroup } from '@patternfly/react-core';
 import {
   Button,
   ButtonVariant,
@@ -58,8 +58,8 @@ export const getCategoryInput = ({
   return (
     <ToolbarFilter
       categoryName={categoryOption}
-      chips={getChips(filters[categoryOption.key] as Filter[])}
-      deleteChip={onDelete}
+      labels={getChips(filters[categoryOption.key] as Filter[])}
+      deleteLabel={onDelete}
       key={categoryOption.key}
       showToolbarItem={currentCategory === categoryOption.key}
     >
@@ -89,13 +89,12 @@ export const getCategoryInput = ({
                 size={intl.formatMessage(messages.filterByPlaceholder, { value: placeholderKey }).length}
               />
               <Button
+                icon={<SearchIcon />}
                 isDisabled={isDisabled && !_hasFilters}
                 variant={ButtonVariant.control}
                 aria-label={intl.formatMessage(messages.filterByButtonAriaLabel, { value: placeholderKey })}
                 onClick={evt => onCategoryInput(evt, categoryOption.key)}
-              >
-                <SearchIcon />
-              </Button>
+              ></Button>
             </>
           )}
         </InputGroupItem>
@@ -104,7 +103,7 @@ export const getCategoryInput = ({
   );
 };
 
-export const getDefaultCategoryOptions = (): ToolbarChipGroup[] => {
+export const getDefaultCategoryOptions = (): ToolbarLabelGroup[] => {
   return [{ name: intl.formatMessage(messages.names, { count: 1 }), key: 'name' }];
 };
 
@@ -195,7 +194,7 @@ export const getCategorySelect = ({
   isDisabled,
   onCategorySelect,
 }: {
-  categoryOptions?: ToolbarChipGroup[]; // Options for category menu
+  categoryOptions?: ToolbarLabelGroup[]; // Options for category menu
   currentCategory?: string;
   filters?: Filters;
   isDisabled?: boolean;
@@ -222,7 +221,7 @@ export const getCategorySelect = ({
   );
 };
 
-export const getCategorySelectOptions = (categoryOptions: ToolbarChipGroup[]): SelectWrapperOption[] => {
+export const getCategorySelectOptions = (categoryOptions: ToolbarLabelGroup[]): SelectWrapperOption[] => {
   const options: SelectWrapperOption[] = [];
 
   categoryOptions.map(option => {
