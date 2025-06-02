@@ -18,12 +18,14 @@ import {
 export type AccountSettingsState = Readonly<{
   byId: Map<string, AccountSettings>;
   errors?: Map<string, AxiosError>;
+  notification?: Map<string, any>;
   status?: Map<string, FetchStatus>;
 }>;
 
 export const defaultState: AccountSettingsState = {
   byId: new Map(),
   errors: new Map(),
+  notification: new Map(),
   status: new Map(),
 };
 
@@ -71,8 +73,9 @@ export function accountSettingsReducer(state = defaultState, action: AccountSett
     case getType(updateAccountSettingsFailure):
       return {
         ...state,
-        status: new Map(state.status).set(action.meta.fetchId, FetchStatus.complete),
         errors: new Map(state.errors).set(action.meta.fetchId, action.payload),
+        notification: new Map(state.notification).set(action.meta.fetchId, action.meta.notification),
+        status: new Map(state.status).set(action.meta.fetchId, FetchStatus.complete),
       };
     case getType(updateAccountSettingsRequest):
       return {
@@ -82,8 +85,9 @@ export function accountSettingsReducer(state = defaultState, action: AccountSett
     case getType(updateAccountSettingsSuccess):
       return {
         ...state,
-        status: new Map(state.status).set(action.meta.fetchId, FetchStatus.complete),
         errors: new Map(state.errors).set(action.meta.fetchId, null),
+        notification: new Map(state.notification).set(action.meta.fetchId, action.meta.notification),
+        status: new Map(state.status).set(action.meta.fetchId, FetchStatus.complete),
       };
     default:
       return state;
