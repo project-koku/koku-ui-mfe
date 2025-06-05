@@ -19,6 +19,9 @@ metadata:
   name: koku-frontend-mfe-on-push
   namespace: cost-mgmt-dev-tenant
 spec:
+  taskRunTemplate:
+    serviceAccountName: build-pipeline-koku-frontend-mfe
+
   params:
     - name: git-url
       value: '{{source_url}}'
