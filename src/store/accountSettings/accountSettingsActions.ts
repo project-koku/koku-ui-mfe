@@ -1,5 +1,4 @@
 import { AlertVariant } from '@patternfly/react-core';
-import { addNotification } from '@redhat-cloud-services/frontend-components-notifications/redux';
 import type { AccountSettings, AccountSettingsPayload, AccountSettingsType } from 'api/accountSettings';
 import {
   fetchAccountSettings as apiFetchAccountSettings,
@@ -23,6 +22,7 @@ import {
 
 interface AccountSettingsActionMeta {
   fetchId: string;
+  notification?: any;
 }
 
 export const fetchAccountSettingsRequest = createAction('settings/fetch/request')<AccountSettingsActionMeta>();
@@ -89,24 +89,28 @@ export function updateAccountSettings(settingsType: AccountSettingsType, payload
 
     return apiUpdateAccountSettings(settingsType, payload)
       .then(res => {
-        dispatch(updateAccountSettingsSuccess(res, meta));
         dispatch(
-          addNotification({
-            title: intl.formatMessage(messages.settingsSuccessTitle),
-            description: intl.formatMessage(messages.settingsSuccessDesc),
-            variant: AlertVariant.success,
-            dismissable: true,
+          updateAccountSettingsSuccess(res, {
+            ...meta,
+            notification: {
+              description: intl.formatMessage(messages.settingsSuccessDesc),
+              dismissable: true,
+              title: intl.formatMessage(messages.settingsSuccessTitle),
+              variant: AlertVariant.success,
+            },
           })
         );
       })
       .catch(err => {
-        dispatch(updateAccountSettingsFailure(err, meta));
         dispatch(
-          addNotification({
-            title: intl.formatMessage(messages.settingsErrorTitle),
-            description: intl.formatMessage(messages.settingsErrorDesc),
-            variant: AlertVariant.danger,
-            dismissable: true,
+          updateAccountSettingsFailure(err, {
+            ...meta,
+            notification: {
+              description: intl.formatMessage(messages.settingsErrorDesc),
+              dismissable: true,
+              title: intl.formatMessage(messages.settingsErrorTitle),
+              variant: AlertVariant.danger,
+            },
           })
         );
       });
