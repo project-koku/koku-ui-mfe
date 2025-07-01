@@ -128,7 +128,9 @@ const OptimizationsBreakdown: React.FC<OptimizationsBreakdownProps> = () => {
       <div style={styles.alertContainer}>
         <Alert isInline variant="warning" title={intl.formatMessage(messages.notificationsAlertTitle)}>
           <List>
-            {notifications?.map((notification, index) => <ListItem key={index}>{notification.message}</ListItem>)}
+            {notifications?.map((notification, index) => (
+              <ListItem key={index}>{notification.message}</ListItem>
+            ))}
           </List>
         </Alert>
       </div>
