@@ -119,6 +119,7 @@ class DataTable extends React.Component<DataTableProps, any> {
           aria-label={intl.formatMessage(messages.dataTableAriaLabel)}
           className="tableOverride"
           gridBreakPoint="grid-2xl"
+          hasAnimations
           variant={TableVariant.compact}
         >
           <Thead>
