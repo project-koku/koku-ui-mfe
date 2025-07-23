@@ -62,7 +62,7 @@
     "@redhat-cloud-services/frontend-components-utilities": "^6.1.0",
     "@reduxjs/toolkit": "^2.8.2",
     "@unleash/proxy-client-react": "^5.0.0",
-    "axios": "^1.10.0",
+    "axios": "^1.11.0",
     "date-fns": "^4.1.0",
     "js-file-download": "^0.4.12",
     "lodash": "^4.17.21",
