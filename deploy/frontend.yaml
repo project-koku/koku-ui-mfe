@@ -25,7 +25,7 @@ objects:
                   expandable: true
                   routes:
                     - id: 'cost-management-mfe.ros.badge'
-                      title: 'Optimizations badge'
+                      title: '0ptimizations badge'
                       href: '/staging/cost-management/ros/optimizations/badge'
                     - id: 'cost-management-mfe.ros.link'
                       title: 'Optimizations link'
