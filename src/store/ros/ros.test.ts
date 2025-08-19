@@ -44,7 +44,7 @@ test('default state', () => {
 test('fetch ros success', async () => {
   const store = createRossStore();
   store.dispatch(actions.fetchRosReport(rosPathsType, rosType, rosQueryString));
-  expect(runRosMock).toBeCalled();
+  expect(runRosMock).toHaveBeenCalled();
   expect(selectors.selectRosFetchStatus(store.getState(), rosPathsType, rosType, rosQueryString)).toBe(
     FetchStatus.inProgress
   );
@@ -61,7 +61,7 @@ test('fetch ros failure', async () => {
   const error = Symbol('ros error');
   runRosMock.mockRejectedValueOnce(error);
   store.dispatch(actions.fetchRosReport(rosPathsType, rosType, rosQueryString));
-  expect(runRosReport).toBeCalled();
+  expect(runRosReport).toHaveBeenCalled();
   expect(selectors.selectRosFetchStatus(store.getState(), rosPathsType, rosType, rosQueryString)).toBe(
     FetchStatus.inProgress
   );
