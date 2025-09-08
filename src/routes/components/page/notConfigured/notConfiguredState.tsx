@@ -21,7 +21,7 @@ const NotConfiguredState: React.FC<NotConfiguredStateProps> = () => {
         isCode
         toggleAriaLabel={intl.formatMessage(messages.copyToClipboard)}
       >
-        oc label namespace NAMESPACE insights_cost_management_optimizations="true" --overwrite="true"
+        oc label namespace NAMESPACE cost_management_optimizations="true" --overwrite="true"
       </ClipboardCopy>
     );
   };
