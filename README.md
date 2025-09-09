@@ -55,7 +55,7 @@ npm test
 
 ## Running Koku MFE against a hosted Koku API, using webpack proxy
 
-Note that this approach currently supports the Insights stage-beta, stage-stable, prod-beta, and prod-stable environments.
+Note that this approach currently supports only the Insights stage environment.
 
 1. Start development server
 ```
@@ -64,14 +64,14 @@ npm start
 
 Follow the prompts that follow.
 
-* Do you want to use local api? `no`
 * Which platform environment you want to use `stage`
-* Which Chrome environment you want to use? `beta`
 
 2. Open the following URL
 ```
-https://stage.foo.redhat.com:1337/beta/staging/cost-management
+https://stage.foo.redhat.com:1337/staging/cost-management
 ```
+
+Note: Must log in with a user that has Cost Management permissions
 
 ### Running Koku MFE with local Cloud Services Backend
 
