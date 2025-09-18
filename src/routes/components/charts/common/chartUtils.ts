@@ -52,7 +52,7 @@ export const getDomain = (series: ChartSeries[], hiddenSeries: Set<number>, grou
     }
     series.forEach((s: any, index) => {
       if (!isSeriesHidden(hiddenSeries, index) && s.data && s.data.length !== 0) {
-        const { max, min } = getMaxMinValues(s.data);
+        const { max = null, min = null } = getMaxMinValues(s.data);
         if ((maxValue === null || max > maxValue) && max !== null) {
           maxValue = max;
         }
