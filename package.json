@@ -113,7 +113,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
-    "eslint-plugin-testing-library": "^7.8.0",
+    "eslint-plugin-testing-library": "^7.8.1",
     "git-revision-webpack-plugin": "^5.0.0",
     "globals": "^16.4.0",
     "identity-obj-proxy": "^3.0.0",
@@ -126,7 +126,7 @@
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
     "swc_mut_cjs_exports": "^10.7.0",
-    "ts-jest": "^29.4.1",
+    "ts-jest": "^29.4.4",
     "ts-patch": "^3.3.0",
     "typescript": "^5.9.2"
   },
