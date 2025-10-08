@@ -100,12 +100,6 @@ export default defineMessages({
     description: 'Processing data to generate a list of all services that sums to a total cost...',
     id: 'detailsEmptyState',
   },
-  docsGettingStarted: {
-    defaultMessage:
-      'https://docs.redhat.com/en/documentation/cost_management_service/1-latest/html/getting_started_with_resource_optimization_for_openshift',
-    description: 'Getting started with resource optimization for OpenShift',
-    id: 'docsGettingStarted',
-  },
   docsOptimizations: {
     defaultMessage:
       'https://docs.redhat.com/en/documentation/cost_management_service/1-latest/html/getting_started_with_resource_optimization_for_openshift/optimizations-ros',
@@ -151,29 +145,6 @@ export default defineMessages({
     defaultMessage: '{value, select, ' + 'excludes {excludes} ' + 'includes {includes} ' + 'other {}}',
     description: 'Exclude filter values',
     id: 'excludeValues',
-  },
-  filterByButtonAriaLabel: {
-    defaultMessage:
-      '{value, select, ' +
-      'account {Filter button for account name} ' +
-      'aws_category {Filter button for cost category name} ' +
-      'cluster {Filter button for cluster name} ' +
-      'gcp_project {Filter button for GCP project name} ' +
-      'name {Filter button for name name} ' +
-      'node {Filter button for node name} ' +
-      'org_unit_id {Filter button for organizational unit name} ' +
-      'payer_tenant_id {Filter button for account name} ' +
-      'product_service {Filter button for service name} ' +
-      'project {Filter button for project name} ' +
-      'region {Filter button for region name} ' +
-      'resource_location {Filter button for region name} ' +
-      'service {Filter button for service name} ' +
-      'service_name {Filter button for service_name name} ' +
-      'subscription_guid {Filter button for account name} ' +
-      'tag {Filter button for tag name} ' +
-      'other {}}',
-    description: 'Filter button for "value" name',
-    id: 'filterByButtonAriaLabel',
   },
   filterByInputAriaLabel: {
     defaultMessage:
