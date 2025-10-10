@@ -1,11 +1,22 @@
 {
-   "extends": [
-      "github>konflux-ci/mintmaker//config/renovate/renovate.json"
-   ],
+   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
    "updateNotScheduled": false,
    "timezone": "America/New_York",
   "ignorePaths": [
     "**/.archive/**",
     "**/node_modules/**"
+  ],
+  "packageRules": [
+    {
+      "description": "Skip updates for React",
+      "matchPackageNames": ["react"],
+      "enabled": false
+    },
+    {
+      "description": "Skip updates for node_modules and .archive",
+      "matchUpdateTypes": ["*"],
+      "matchFileNames": ["**/node_modules/**", "**/.archive/**"],
+      "enabled": false
+    }
   ]
 }
