@@ -8,9 +8,9 @@
   ],
   "packageRules": [
     {
-      "description": "Skip updates for React",
-      "matchPackageNames": ["react"],
-      "enabled": false
+      "description": "Skip updates for react monorepo",
+      "matchPackageNames": ["react", "react-dom", "@types/react", "@types/react-dom"],
+      "allowedVersions": "< 19.0.0"
     },
     {
       "description": "Skip updates for node_modules and .archive",
