@@ -240,6 +240,7 @@ const OptimizationsBreakdown: React.FC<OptimizationsBreakdownProps> = () => {
   };
 
   const isLoading = reportFetchStatus === FetchStatus.inProgress;
+  // eslint-disable-next-line
   const [availableTabs] = useState(getAvailableTabs());
 
   return (
