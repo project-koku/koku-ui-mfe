@@ -1,3 +1,7 @@
+# DEPRECATED
+
+This project is no longer active. Please see the [koku-ui-ros README][koku-ui-ros-readme] in the koku-ui mono-repo.
+
 # Koku microfrontend (MFE) with Module Federation
 
 [![Apache 2.0][license-badge]](https://github.com/project-koku/koku-ui-mfe/blob/main/LICENSE)
@@ -128,6 +132,7 @@ This [RELEASE][release-doc] doc describes how to release Koku MFE to each stagin
 [codecov-badge]: https://codecov.io/gh/project-koku/koku-ui-mfe/graph/badge.svg?token=1hjFIy1cRe
 [Jira]: https://issues.redhat.com/projects/COST/
 [koku-ui-readme]: https://github.com/project-koku/koku-ui#readme
+[koku-ui-ros-readme]: https://github.com/project-koku/koku-ui/blob/main/apps/koku-ui-ros/README.md
 [license-badge]: https://img.shields.io/github/license/project-koku/koku-ui-mfe.svg?longCache=true
 [nodejs]: https://nodejs.org/en/
 [npm]: https://www.npmjs.com/
