@@ -1,6 +1,6 @@
 # DEPRECATED
 
-This project is no longer active. Please see the [koku-ui-ros README][koku-ui-ros-readme] in the koku-ui mono-repo.
+This project is no longer active. Please see the [koku-ui-ros README][koku-ui-ros-readme] in the koku-ui monorepo.
 
 # Koku microfrontend (MFE) with Module Federation
 
